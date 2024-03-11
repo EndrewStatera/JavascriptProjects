@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        #products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Simple E-Commerce Site</h1>
+</header>
+
+<div id="products-container"></div>
+
+<script>
+    // Dummy product data
+    const products = [
+        { id: 1, name: 'Product 1', price: 19.99 },
+        { id: 2, name: 'Product 2', price: 29.99 },
+        { id: 3, name: 'Product 3', price: 39.99 },
+    ];
+
+    // Function to display products
+    function displayProducts() {
+        const container = document.getElementById('products-container');
+
+        products.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.classList.add('product');
+
+            productElement.innerHTML = `
+                <h3>${product.name}</h3>
+                <p>Price: $${product.price.toFixed(2)}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            `;
+
+            container.appendChild(productElement);
+        });
+    }
+
+    // Function to simulate adding a product to the cart
+    function addToCart(productId) {
+        alert(`Product ${productId} added to the cart!`);
+    }
+
+    // Display products when the page loads
+    displayProducts();
+</script>
+
+</body>
+</html>

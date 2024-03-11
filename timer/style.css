@@ -1,0 +1,31 @@
+body{
+    background-image: url('background.jpg');
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    scroll-snap-type: none;
+}
+
+#timer-container{
+    display: flex;
+    border-width: 5px;
+    border-color: rgb(255, 255, 255);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#clock{
+    font-family: monospace;
+    font-size: 6rem;
+    color: white;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: rgb(0, 0, 0, 0.5);
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+    background-color: rgb(252, 252, 252, 0.2);
+    width: 100%;
+}

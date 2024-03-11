@@ -1,0 +1,24 @@
+body{
+    width: 100%;
+}
+#myBox{
+    margin: auto;
+    background-color: lightgreen;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+p{
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+}
+
+button{
+    display: flex;
+    font-size: 2rem;
+    margin: auto;
+}
